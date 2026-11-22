@@ -29,7 +29,7 @@ public sealed class Renderer
         Raylib.EndDrawing();
     }
 
-    // ---------------------------------------------------------------- toolbar
+    #region Toolbar
 
     private static void DrawToolbar(Layout layout, Difficulty current)
     {
@@ -51,7 +51,9 @@ public sealed class Renderer
         }
     }
 
-    // ----------------------------------------------------------------- header
+    #endregion
+
+    #region Header
 
     private static void DrawHeader(Board board, Layout layout, float elapsed, bool grabbing)
     {
@@ -113,6 +115,8 @@ public sealed class Renderer
                 break;
         }
     }
+
+    #endregion
 
     #region Main Grid
 
@@ -250,7 +254,7 @@ public sealed class Renderer
 
     #endregion
 
-    // ----------------------------------------------------------------- footer
+    #region Footer
 
     private static void DrawFooter(Board board, Layout layout, Difficulty difficulty, float elapsed, float? best, bool newBest)
     {
@@ -285,7 +289,9 @@ public sealed class Renderer
         DrawCenteredText(bestText, new Rectangle(f.X, f.Y + 22, f.Width, 18), 14, Theme.TextDim);
     }
 
-    // ---------------------------------------------------------------- helpers
+    #endregion
+
+    #region Helpers
 
     private static void DrawBevel(Rectangle r, bool raised, int thickness, Color fill)
     {
@@ -340,4 +346,6 @@ public sealed class Renderer
         float rad = degrees * MathF.PI / 180f;
         return new Vector2(center.X + MathF.Cos(rad) * radius, center.Y + MathF.Sin(rad) * radius);
     }
+
+    #endregion
 }

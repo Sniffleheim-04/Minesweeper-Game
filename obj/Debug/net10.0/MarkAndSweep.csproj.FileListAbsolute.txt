@@ -42,3 +42,4 @@ C:\Conundrum\Programming\C#\Mark-and-Sweep\bin\Debug\net10.0\assets\num_8.png
 C:\Conundrum\Programming\C#\Mark-and-Sweep\bin\Debug\net10.0\assets\open.png
 C:\Conundrum\Programming\C#\Mark-and-Sweep\bin\Debug\net10.0\assets\question.png
 C:\Conundrum\Programming\C#\Mark-and-Sweep\bin\Debug\net10.0\assets\wrong.png
+C:\Conundrum\Programming\C#\Mark-and-Sweep\obj\Debug\net10.0\MarkAndSweep.sourcelink.json
