@@ -75,25 +75,25 @@ public static class Theme
 
     public static void InitTextures()
     {
-        explodedTexture = Raylib.LoadTexture("assets/exploded.png");
-        faceCoolTexture = Raylib.LoadTexture("assets/face_cool.png");
-        faceDeadTexture = Raylib.LoadTexture("assets/face_dead.png");
-        faceHappyTexture = Raylib.LoadTexture("assets/face_happy.png");
-        faceWowTexture = Raylib.LoadTexture("assets/face_wow.png");
-        flagTexture = Raylib.LoadTexture("assets/flag.png");
-        hiddenTexture = Raylib.LoadTexture("assets/hidden.png");
-        hoverTexture = Raylib.LoadTexture("assets/hover.png");
-        mineTexture = Raylib.LoadTexture("assets/mine.png");
-        num1Texture = Raylib.LoadTexture("assets/num_1.png");
-        num2Texture = Raylib.LoadTexture("assets/num_2.png");
-        num3Texture = Raylib.LoadTexture("assets/num_3.png");
-        num4Texture = Raylib.LoadTexture("assets/num_4.png");
-        num5Texture = Raylib.LoadTexture("assets/num_5.png");
-        num6Texture = Raylib.LoadTexture("assets/num_6.png");
-        num7Texture = Raylib.LoadTexture("assets/num_7.png");
-        num8Texture = Raylib.LoadTexture("assets/num_8.png");
-        openTexture = Raylib.LoadTexture("assets/open.png");
-        questionTexture = Raylib.LoadTexture("assets/question.png");
-        wrongTexture = Raylib.LoadTexture("assets/wrong.png");
+        explodedTexture = Raylib.LoadTexture("assets/images/exploded.png");
+        faceCoolTexture = Raylib.LoadTexture("assets/images/face_cool.png");
+        faceDeadTexture = Raylib.LoadTexture("assets/images/face_dead.png");
+        faceHappyTexture = Raylib.LoadTexture("assets/images/face_happy.png");
+        faceWowTexture = Raylib.LoadTexture("assets/images/face_wow.png");
+        flagTexture = Raylib.LoadTexture("assets/images/flag.png");
+        hiddenTexture = Raylib.LoadTexture("assets/images/hidden.png");
+        hoverTexture = Raylib.LoadTexture("assets/images/hover.png");
+        mineTexture = Raylib.LoadTexture("assets/images/mine.png");
+        num1Texture = Raylib.LoadTexture("assets/images/num_1.png");
+        num2Texture = Raylib.LoadTexture("assets/images/num_2.png");
+        num3Texture = Raylib.LoadTexture("assets/images/num_3.png");
+        num4Texture = Raylib.LoadTexture("assets/images/num_4.png");
+        num5Texture = Raylib.LoadTexture("assets/images/num_5.png");
+        num6Texture = Raylib.LoadTexture("assets/images/num_6.png");
+        num7Texture = Raylib.LoadTexture("assets/images/num_7.png");
+        num8Texture = Raylib.LoadTexture("assets/images/num_8.png");
+        openTexture = Raylib.LoadTexture("assets/images/open.png");
+        questionTexture = Raylib.LoadTexture("assets/images/question.png");
+        wrongTexture = Raylib.LoadTexture("assets/images/wrong.png");
     }
 }
