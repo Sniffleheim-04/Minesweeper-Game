@@ -76,12 +76,14 @@ public sealed class Layout
         DifficultyButtons = new Rectangle[count];
         for (int i = 0; i < count; i++)
             DifficultyButtons[i] = new Rectangle(startX + i * (ButtonWidth + ButtonGap), btnY, ButtonWidth, ButtonHeight);
+
+        UpdateWindow(this);
     }
 
     public Rectangle CellRect(int x, int y) =>
         new(GridRect.X + x * CellSize, GridRect.Y + y * CellSize, CellSize, CellSize);
 
-    /// <summary>Converts a mouse position into grid coordinates, if it is over the grid.</summary>
+    // Convert mouse pos into grid coordinates
     public bool TryGetCell(Vector2 mouse, out int x, out int y)
     {
         x = y = -1;
@@ -91,5 +93,20 @@ public sealed class Layout
         y = (int)((mouse.Y - GridRect.Y) / CellSize);
 
         return true;
+    }
+
+    // Centers the window when the layout changes
+    private static void UpdateWindow(Layout layout)
+    {
+        Raylib.SetWindowSize(layout.WindowWidth, layout.WindowHeight);
+
+        int monitor = Raylib.GetCurrentMonitor();
+        int screenWidth = Raylib.GetMonitorWidth(monitor);
+        int screenHeight = Raylib.GetMonitorHeight(monitor);
+
+        int x = (screenWidth - layout.WindowWidth) / 2;
+        int y = (screenHeight - layout.WindowHeight) / 2;
+
+        Raylib.SetWindowPosition(x, y);
     }
 }

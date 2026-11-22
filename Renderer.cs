@@ -3,7 +3,6 @@ using Raylib_cs;
 
 namespace MarkAndSweep;
 
-/// <summary>Draws the whole game. Reads state, never changes it.</summary>
 public sealed class Renderer
 {
     
