@@ -1,0 +1,6 @@
+Number Puzzle Pixel UI Kit, by Infi76.
+You may use these assets in any number of free or commercial games and apps, and modify them.
+You may not resell or redistribute the assets themselves, alone or in an asset pack.
+Credit is appreciated but not required.
+
+Full kit (sudoku, 2048, math tiles, 32 px, LED digits, banners): https://infi76.itch.io/number-puzzle-pixel-ui-kit
