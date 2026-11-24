@@ -74,6 +74,8 @@ public static class Theme
     public static Texture2D questionTexture;
     public static Texture2D wrongTexture;
 
+    public static Image icon;
+
     public static void InitTextures()
     {
         explodedTexture = Raylib.LoadTexture("assets/images/exploded.png");
@@ -96,5 +98,7 @@ public static class Theme
         openTexture = Raylib.LoadTexture("assets/images/open.png");
         questionTexture = Raylib.LoadTexture("assets/images/question.png");
         wrongTexture = Raylib.LoadTexture("assets/images/wrong.png");
+
+        icon = Raylib.LoadImage("assets/images/mine.png");
     }
 }

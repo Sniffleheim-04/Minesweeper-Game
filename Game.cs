@@ -27,6 +27,8 @@ public sealed class Game
     {
         Raylib.InitWindow(_layout.WindowWidth, _layout.WindowHeight, "Mark-and-Sweep");
         Theme.InitTextures();
+        Raylib.SetWindowIcon(Theme.icon);
+        Raylib.UnloadImage(Theme.icon);
         Raylib.SetTargetFPS(60);
 
         while (!Raylib.WindowShouldClose())
