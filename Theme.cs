@@ -26,6 +26,7 @@ public static class Theme
     public static readonly Color ExplodedCell = new(230, 60, 60, 255);
 
     public static readonly Color Black = new(0, 0, 0, 255);
+    public static readonly Color Grey = new(160, 165, 180, 255);
     public static readonly Color White = new(255, 255, 255, 255);
     public static readonly Color Red = new(220, 30, 30, 255);
     public static readonly Color Yellow = new(255, 215, 0, 255);

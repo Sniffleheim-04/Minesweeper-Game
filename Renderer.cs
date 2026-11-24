@@ -18,7 +18,7 @@ public sealed class Renderer
         bool newBest)
     {
         Raylib.BeginDrawing();
-        Raylib.ClearBackground(Theme.Background);
+        Raylib.ClearBackground(Theme.Grey);
 
         DrawToolbar(layout, difficulty);
         DrawHeader(board, layout, elapsed, mouseHeldOnGrid);
