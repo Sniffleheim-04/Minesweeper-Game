@@ -91,26 +91,46 @@ public sealed class Renderer
         {
             case GameStatus.Lost:
                 // X eyes + frown
-                DrawX(new Vector2(cx - 5, cy - 4), 3);
-                DrawX(new Vector2(cx + 5, cy - 4), 3);
-                DrawArc(new Vector2(cx, cy + 10), 7, 205, 335, 2, Theme.Black);
+                Raylib.DrawTexturePro(
+                    Theme.faceDeadTexture,
+                    new Rectangle(0, 0, Theme.faceDeadTexture.Width, Theme.faceDeadTexture.Height),
+                    r,
+                    Vector2.Zero,
+                    0f,
+                    Color.White
+                );
                 break;
 
             case GameStatus.Won:
-                // Sunglasses + smile
-                Raylib.DrawRectangle((int)cx - 10, (int)cy - 7, 8, 6, Theme.Black);
-                Raylib.DrawRectangle((int)cx + 2, (int)cy - 7, 8, 6, Theme.Black);
-                Raylib.DrawLineEx(new Vector2(cx - 2, cy - 5), new Vector2(cx + 2, cy - 5), 2, Theme.Black);
-                DrawArc(new Vector2(cx, cy + 1), 8, 25, 155, 2, Theme.Black);
+                Raylib.DrawTexturePro(
+                    Theme.faceCoolTexture,
+                    new Rectangle(0, 0, Theme.faceCoolTexture.Width, Theme.faceCoolTexture.Height),
+                    r,
+                    Vector2.Zero,
+                    0f,
+                    Color.White
+                );
                 break;
 
             default:
-                Raylib.DrawCircleV(new Vector2(cx - 5, cy - 4), 2, Theme.Black);
-                Raylib.DrawCircleV(new Vector2(cx + 5, cy - 4), 2, Theme.Black);
                 if (grabbing)
-                    Raylib.DrawCircleV(new Vector2(cx, cy + 6), 3, Theme.Black);   // "oh!" face
+                    Raylib.DrawTexturePro(
+                        Theme.faceWowTexture,
+                        new Rectangle(0, 0, Theme.faceWowTexture.Width, Theme.faceWowTexture.Height),
+                        r,
+                        Vector2.Zero,
+                        0f,
+                        Color.White
+                    );
                 else
-                    DrawArc(new Vector2(cx, cy + 1), 8, 25, 155, 2, Theme.Black);   // smile
+                    Raylib.DrawTexturePro(
+                        Theme.faceHappyTexture,
+                        new Rectangle(0, 0, Theme.faceHappyTexture.Width, Theme.faceHappyTexture.Height),
+                        r,
+                        Vector2.Zero,
+                        0f,
+                        Color.White
+                    );
                 break;
         }
     }
