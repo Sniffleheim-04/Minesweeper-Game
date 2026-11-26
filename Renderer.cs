@@ -22,6 +22,7 @@ public sealed class Renderer
 
         DrawToolbar(layout, difficulty);
         DrawHeader(board, layout, elapsed, mouseHeldOnGrid);
+        DrawSkillTiles(board, layout, elapsed, mouseHeldOnGrid);
         DrawGrid(board, layout, hover);
         DrawFooter(board, layout, difficulty, elapsed, best, newBest);
 
@@ -56,7 +57,7 @@ public sealed class Renderer
 
     private static void DrawHeader(Board board, Layout layout, float elapsed, bool grabbing)
     {
-        DrawBevel(layout.HeaderRect, raised: false, thickness: 3, fill: Theme.Background);
+        // DrawBevel(layout.HeaderRect, raised: false, thickness: 3, fill: Theme.Background);
 
         DrawCounter(layout.MineCounter, board.MinesRemaining);
         DrawCounter(layout.TimerRect, Math.Min(999, (int)elapsed));
@@ -133,6 +134,17 @@ public sealed class Renderer
                     );
                 break;
         }
+    }
+
+    #endregion
+
+    #region Skill Tiles
+
+    private static void DrawSkillTiles(Board board, Layout layout, float elapsed, bool grabbing)
+    {
+        DrawBevel(layout.SkillTilesRect, raised: false, thickness: 3, fill: Theme.Background);
+
+        
     }
 
     #endregion

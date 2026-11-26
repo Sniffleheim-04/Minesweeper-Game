@@ -13,6 +13,7 @@ public sealed class Layout
     public const int Padding = 12;
     public const int ToolbarHeight = 36;
     public const int HeaderHeight = 56;
+    public const int SkillTilesHeight = 56;
     public const int FooterHeight = 44;
     public const int MinWindowWidth = 360;
 
@@ -28,7 +29,9 @@ public sealed class Layout
 
     public Rectangle ToolbarRect { get; }
     public Rectangle HeaderRect { get; }
+    public Rectangle SkillTilesRect { get; }
     public Rectangle FaceButton { get; }
+    public Rectangle AbilityShield { get; }
     public Rectangle MineCounter { get; }
     public Rectangle TimerRect { get; }
     public Rectangle GridRect { get; }
@@ -45,15 +48,21 @@ public sealed class Layout
         ToolbarRect = new Rectangle(0, 0, WindowWidth, ToolbarHeight);
 
         HeaderRect = new Rectangle(Padding, ToolbarHeight + Padding, WindowWidth - Padding * 2, HeaderHeight);
+        SkillTilesRect = new Rectangle(Padding, ToolbarHeight + HeaderHeight + Padding, WindowWidth - Padding * 2, SkillTilesHeight);
 
         int gridX = (WindowWidth - gridW) / 2;
-        int gridY = (int)(HeaderRect.Y + HeaderRect.Height) + Padding;
+        int gridY = (int)(SkillTilesRect.Y + SkillTilesRect.Height) + Padding;
         GridRect = new Rectangle(gridX, gridY, gridW, gridH);
 
         FooterRect = new Rectangle(Padding, gridY + gridH + Padding / 2, WindowWidth - Padding * 2, FooterHeight);
         WindowHeight = (int)(FooterRect.Y + FooterRect.Height) + Padding / 2;
 
         FaceButton = new Rectangle(
+            HeaderRect.X + HeaderRect.Width / 2 - FaceSize / 2,
+            HeaderRect.Y + (HeaderHeight - FaceSize) / 2,
+            FaceSize, FaceSize);
+
+        AbilityShield = new Rectangle(
             HeaderRect.X + HeaderRect.Width / 2 - FaceSize / 2,
             HeaderRect.Y + (HeaderHeight - FaceSize) / 2,
             FaceSize, FaceSize);
