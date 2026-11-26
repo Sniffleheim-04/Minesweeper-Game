@@ -86,6 +86,13 @@ public sealed class Game
                     return;
                 }
             }
+
+            // Instant Reset when clicking after winning/losing
+            if (_board.Status == GameStatus.Lost || _board.Status == GameStatus.Won)
+            {
+                NewGame();
+                return;
+            }
         }
 
         if (!_layout.TryGetCell(mouse, out int x, out int y)) return;
