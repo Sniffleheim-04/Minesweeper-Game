@@ -20,7 +20,7 @@ public sealed class Layout
     private const int ButtonWidth = 104;
     private const int ButtonHeight = 26;
     private const int ButtonGap = 6;
-    private const int FaceSize = 40;
+    private const int SkillTileSize = 40;
     private const int DisplayWidth = 84;
     private const int DisplayHeight = 40;
 
@@ -32,6 +32,8 @@ public sealed class Layout
     public Rectangle SkillTilesRect { get; }
     public Rectangle FaceButton { get; }
     public Rectangle AbilityShield { get; }
+    public Rectangle AbilityDestroyTile { get; }
+    public Rectangle AbilityRevealRandomTile { get; }
     public Rectangle MineCounter { get; }
     public Rectangle TimerRect { get; }
     public Rectangle GridRect { get; }
@@ -58,14 +60,24 @@ public sealed class Layout
         WindowHeight = (int)(FooterRect.Y + FooterRect.Height) + Padding / 2;
 
         FaceButton = new Rectangle(
-            HeaderRect.X + HeaderRect.Width / 2 - FaceSize / 2,
-            HeaderRect.Y + (HeaderHeight - FaceSize) / 2,
-            FaceSize, FaceSize);
+            HeaderRect.X + HeaderRect.Width / 2 - SkillTileSize / 2,
+            HeaderRect.Y + (HeaderHeight - SkillTileSize) / 2,
+            SkillTileSize, SkillTileSize);
 
         AbilityShield = new Rectangle(
-            HeaderRect.X + HeaderRect.Width / 2 - FaceSize / 2,
-            HeaderRect.Y + (HeaderHeight - FaceSize) / 2,
-            FaceSize, FaceSize);
+            SkillTilesRect.X + SkillTilesRect.Width / 2 - SkillTileSize / 2,
+            SkillTilesRect.Y + (HeaderHeight - SkillTileSize) / 2,
+            SkillTileSize, SkillTileSize);
+
+        AbilityDestroyTile = new Rectangle(
+            SkillTilesRect.X + SkillTilesRect.Width / 2 - SkillTileSize / 2 + 60,
+            SkillTilesRect.Y + (HeaderHeight - SkillTileSize) / 2,
+            SkillTileSize, SkillTileSize);
+
+        AbilityRevealRandomTile = new Rectangle(
+            SkillTilesRect.X + SkillTilesRect.Width / 2 - SkillTileSize / 2 - 60,
+            SkillTilesRect.Y + (HeaderHeight - SkillTileSize) / 2,
+            SkillTileSize, SkillTileSize);
 
         MineCounter = new Rectangle(
             HeaderRect.X + 8,

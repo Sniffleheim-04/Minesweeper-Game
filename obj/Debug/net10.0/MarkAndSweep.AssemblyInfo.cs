@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarkAndSweep")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3f1a4ccf5976bb05021c76e0591eb7886245820")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b3d9ae23c97b3986407e89d79e17db7e1310767")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarkAndSweep")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarkAndSweep")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

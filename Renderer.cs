@@ -22,7 +22,7 @@ public sealed class Renderer
 
         DrawToolbar(layout, difficulty);
         DrawHeader(board, layout, elapsed, mouseHeldOnGrid);
-        DrawSkillTiles(board, layout, elapsed, mouseHeldOnGrid);
+        DrawSkillTilesRect(board, layout, elapsed, mouseHeldOnGrid);
         DrawGrid(board, layout, hover);
         DrawFooter(board, layout, difficulty, elapsed, best, newBest);
 
@@ -140,9 +140,20 @@ public sealed class Renderer
 
     #region Skill Tiles
 
-    private static void DrawSkillTiles(Board board, Layout layout, float elapsed, bool grabbing)
+    private static void DrawSkillTilesRect(Board board, Layout layout, float elapsed, bool grabbing)
     {
         DrawBevel(layout.SkillTilesRect, raised: false, thickness: 3, fill: Theme.Background);
+
+        DrawSkillTile(layout.AbilityShield, board.Status, grabbing);
+        DrawSkillTile(layout.AbilityDestroyTile, board.Status, grabbing);
+        DrawSkillTile(layout.AbilityRevealRandomTile, board.Status, grabbing);
+    }
+
+    private static void DrawSkillTile(Rectangle r, GameStatus status, bool grabbing)
+    {
+        Vector2 mouse = Raylib.GetMousePosition();
+        bool pressed = Raylib.CheckCollisionPointRec(mouse, r) && Raylib.IsMouseButtonDown(MouseButton.Left);
+        DrawBevel(r, raised: !pressed, thickness: 3, fill: Theme.Background);
 
         
     }
